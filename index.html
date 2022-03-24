@@ -10,23 +10,24 @@
     <form>
         <label for="length">Password length (between 6 and 64)</label><br />
         <input type="range" id="length" name="passlen" min="6" max="64" value="8" /><br /><br />
-        <input type="checkbox" id="putnum" name="putnum" value="true" />
+        <input type="checkbox" id="putnum" name="putnum"/>
         <label for="putnum">Numbers</label>
-        <input type="checkbox" id="putnum" name="putnum" value="true" />
-        <label for="putnum">Symbols</label>
-        <input type="checkbox" id="putnum" name="putnum" value="true" />
-        <label for="putnum">Lowercase</label>
-        <input type="checkbox" id="putnum" name="putnum" value="true" />
-        <label for="putnum">Uppercase</label>
-        <input type="checkbox" id="putnum" name="putnum" value="true" />
-        <label for="putnum">Exclude similar characters (like 'i' and 'l')</label><br /><br />
+        <input type="checkbox" id="putsym" name="putsym"/>
+        <label for="putsym">Symbols</label>
+        <input type="checkbox" id="putlower" name="putlower"/>
+        <label for="putlower">Lowercase</label>
+        <input type="checkbox" id="putupper" name="putupper"/>
+        <label for="putupper">Uppercase</label>
+        <input type="checkbox" id="excludesimilar" name="excludesimilar"/>
+        <label for="excludesimilar">Exclude similar characters (like 'i' and 'l')</label><br /><br />
         <label for="exclude">Exclude the following characters:</label>
         <input type="text" id="exclude" name="exclude" /><br /><br />
-        <input type="checkbox" id="putnum" name="putnum" value="true" />
-        <label for="putnum">Strict (must include one from each selection)</label><br /><br />
+        <input type="checkbox" id="strict" name="strict"/>
+        <label for="strict">Strict (must include one from each selection)</label><br /><br />
         <input type="reset" value="Reset" />
-        <input type="submit" value="Submit" /><br />
+        <input type="submit" value="Submit" onclick="script"/><br />
     </form>
+    <script src="src/index.js"></script>
 </body>
 
 </html>
