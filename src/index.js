@@ -18,5 +18,5 @@ var password = generator.generate({
     exclude: excludechar,
     strict: ifstrict.checked
 });
-
+console.log(ifnumbers.checked);
 document.getElementById('password').innerHTML = password;
