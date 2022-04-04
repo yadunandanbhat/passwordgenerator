@@ -1,22 +1,23 @@
-var generator = require('generate-password');
-var passwordlength = document.getElementById('length');
-var ifnumbers = document.getElementById('putnum');
-var ifsymbols = document.getElementById('putsym');
-var iflower = document.getElementById('putlower');
-var ifupper = document.getElementById('putupper');
-var exclsim = document.getElementById('excludesimilar');
-var excludechar = document.getElementById('exclude');
-var ifstrict = document.getElementById('strict');
+import { generate } from 'generate-password';
 
-var password = generator.generate({
-    length: passwordlength,
-    numbers: ifnumbers.checked ,
-    symbols: ifsymbols.checked,
-    lowercase: iflower.checked,
-    uppercase: ifupper.checked,
-    excludeSimilarCharacters: exclsim.checked,
-    exclude: excludechar,
-    strict: ifstrict.checked
-});
-console.log(ifnumbers.checked);
-document.getElementById('password').innerHTML = password;
+var passlen = document.getElementById('length');
+var putnum = document.querySelector('#putnum');
+var putsym = document.querySelector('#putsym');
+var putlower = document.querySelector('#putlower');
+var putupper = document.querySelector('#putupper');
+var exclsim = document.querySelector('#exclduesimilar');
+var str = document.querySelector('#strict');
+
+var submt = document.querySelector('#submit');
+submt.addEventListener('click', (event)=> {
+    var passwd = generate({
+        length: 10,
+        numbers: putnum.checked,
+        symbols: putsym.checked,
+        lowercase: putlower.checked,
+        uppercase: putupper.checked,
+        excludeSimilarCharacters: exclsim.checked,
+        strict: str.checked
+    });
+    document.getElementById("password").innerHTML(passwd);
+})
