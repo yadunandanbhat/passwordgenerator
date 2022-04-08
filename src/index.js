@@ -19,8 +19,9 @@ function passgen() {
         symbols: putsym.checked,
         lowercase: putlower.checked,
         uppercase: putupper.checked,
-        excludeSimilarCharacters: exclsim.checked,
+        // excludeSimilarCharacters: exclsim.checked,
         exclude: excl,
         strict: str.checked,
     });
+    document.getElementById("password").innerHTML = passwd;
 }
